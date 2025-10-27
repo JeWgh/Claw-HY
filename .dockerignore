@@ -1,0 +1,8 @@
+# Exclude common development artifacts from the Docker build context
+.git
+.github
+.vscode
+.venv
+*.log
+*.tmp
+*.swp

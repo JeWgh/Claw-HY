@@ -9,7 +9,7 @@ on:
       - .github/workflows/docker-build.yml
   workflow_dispatch:
   schedule:
-    - cron: '0 3 * * 1'
+    - cron: '0 3 1 * *'
 
 env:
   GHCR_IMAGE: ghcr.io/jewgh/claw-hy
@@ -38,8 +38,8 @@ jobs:
       - name: Build and push image
         uses: docker/build-push-action@v5
         with:
-          cache-from: type=gha
-          cache-to: type=gha,mode=max
+          cache-from: type=registry,ref=${{ env.GHCR_IMAGE }}:latest
+          cache-to: type=inline
           context: .
           platforms: linux/amd64
           push: true

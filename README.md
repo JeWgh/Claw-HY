@@ -48,7 +48,7 @@ docker run `
 ## Deploying on Claw Cloud
 
 1. **Application Name** – choose any identifier.
-2. **Image** – `jewgh/claw-hy`.
+2. **Image** – `ghcr.io/jewgh/claw-hy`.
 3. **Resources** – CPU: 0.1, Memory: 64 MB (adjust as needed).
 4. **Network** – expose the HTTP/GRPCS port if required and the UDP port (select `udp://`, set to Public for external access).
 5. **Environment Variables** – example:

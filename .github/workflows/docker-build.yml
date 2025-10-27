@@ -38,6 +38,7 @@ jobs:
       - name: Build and push image
         uses: docker/build-push-action@v5
         with:
+          cache-from: type=ghacache-to: type=gha,mode=max
           context: .
           platforms: linux/amd64
           push: true
